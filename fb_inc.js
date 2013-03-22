@@ -14,10 +14,10 @@ function sendMessage(el, message) {
 
 }
 
-function handlerKeyDown(e) {
+function handlerKeyDown(e, that) {
 		if ((!e.shiftKey) && (e.keyCode == 13)) {
-			var t = '_ENC_'+ENCRYPT(this.value.trim());
-			this.value = '';
-			sendMessage(this.hookEdit, t);
+			var t = '_ENC_'+ENCRYPT(that.value.trim());
+			that.value = '';
+			sendMessage(that.hookEdit, t);
 		}
 }
