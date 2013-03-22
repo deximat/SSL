@@ -18,6 +18,6 @@ function handlerKeyDown(e, that) {
 		if ((!e.shiftKey) && (e.keyCode == 13)) {
 			var t = '_ENC_'+ENCRYPT(that.value.trim());
 			that.value = '';
-			sendMessage(that.hookEdit, t);
+			sendMessage(that.parentElement.parentElement.parentElement.getElementsByTagName('textarea')[0], t);
 		}
 }
