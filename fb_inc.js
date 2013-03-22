@@ -1,7 +1,5 @@
 function ENCRYPT(str) {
 	return btoa(str);
-
-
 }
 
 function sendMessage(el, message) {
@@ -22,3 +20,4 @@ function handlerKeyDown(e) {
 			this.value = '';
 			sendMessage(this.hookEdit, t);
 		}
+}
